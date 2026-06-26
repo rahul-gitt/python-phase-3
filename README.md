@@ -101,3 +101,4 @@ python-phase-3/
 ---
 
 > ⭐ **Learning every day. Building one project at a time.**
+⭐ **If you like my work, consider giving a star to my repositories!**
