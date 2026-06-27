@@ -19,4 +19,6 @@ print(obj+obj2)
 human-readable string representation of an object. 
 It is automatically called when print(obj) or str(obj) is used.'''
 
-''''''
+'''__add__() is a dunder (magic) method used to define the 
+behavior of the + operator for objects. 
+It is automatically called when obj1 + obj2 is used.'''
