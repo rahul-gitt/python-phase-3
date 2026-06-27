@@ -14,4 +14,4 @@ print(d)    # print key valus of the dictionary
 # Set comprehension
 
 s = {x*x for x in range(1,20)}
-print(s)
+print(s)    # print the set
