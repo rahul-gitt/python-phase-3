@@ -96,7 +96,7 @@ class Bank:
                 Bank.__update()
                 print("Ammount withdrew successfully.")
 
-    def updatedetails(self):
+    def showdetails(self):
         account = input("Enter account number : ")
         pin = int(input("Enter the pin number : "))
 
@@ -108,6 +108,10 @@ class Bank:
             print("Account details is : ")
             for i in userdata[0]:
                 print(f"{i} : {userdata[0][i]}")
+
+    def updatedetails(self):
+
+        pass
 
 
 user = Bank()
@@ -131,4 +135,7 @@ if check == 3:
     user.withdrawmoney()
 
 if check == 4:
+    user.showdetails()
+
+if check == 5:
     user.updatedetails()
