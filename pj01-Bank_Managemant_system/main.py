@@ -105,14 +105,47 @@ class Bank:
             print("No such data found.")
 
         else:
-            print("Account details is : ")
+            print("Account details is \n\n: ")
             for i in userdata[0]:
                 print(f"{i} : {userdata[0][i]}")
 
     def updatedetails(self):
+        account = input("Enter your account number : ")
+        pin = int(input("Enter your pin number : "))
 
-        pass
+        userdata = [i for i in Bank.data
+                    if i["account_no."] == account and i["pin"] == pin]
 
+        if not userdata:
+            print("No such account found.")
+            return
+
+        print("\nLeave any field empty if you don't want to change it.\n")
+
+        name = input("New Name : ")
+        email = input("New Email : ")
+        phone = input("New Phone : ")
+        new_pin = input("New PIN : ")
+
+        if name != "":
+            userdata[0]["name"] = name
+
+        if email != "":
+            userdata[0]["email"] = email
+
+        if phone != "":
+            userdata[0]["phone"] = int(phone)
+
+        if new_pin != "":
+            if len(new_pin) == 4:
+                userdata[0]["pin"] = int(new_pin)
+            else:
+                print("PIN must be 4 digits.")
+
+        Bank.__update()
+        print("Account updated successfully.")
+
+       
 
 user = Bank()
 
